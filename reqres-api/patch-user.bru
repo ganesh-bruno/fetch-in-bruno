@@ -1,0 +1,17 @@
+meta {
+  name: patch-user
+  type: http
+  seq: 4
+}
+
+patch {
+  url: https://reqres.in/api/users/2
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "job": "Senior Developer"
+  }
+}

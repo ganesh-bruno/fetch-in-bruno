@@ -1,0 +1,19 @@
+meta {
+  name: repos-api
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.github.com/repos/usebruno/bruno/releases
+  body: none
+  auth: inherit
+}
+
+script:pre-request {
+  console.log("collection var", bru.getCollectionVar("name"));
+}
+
+script:post-response {
+  console.log("collection var", bru.getCollectionVar("value"));
+}

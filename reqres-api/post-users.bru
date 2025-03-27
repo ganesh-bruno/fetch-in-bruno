@@ -1,0 +1,25 @@
+meta {
+  name: post-users
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://reqres.in/api/users?page=2
+  body: json
+  auth: none
+}
+
+params:query {
+  page: 2
+}
+
+body:json {
+  {
+    "id": 100,
+    "email": "ganesh@usebruno.com",
+    "first_name": "Ganesh",
+    "last_name": "Bruno",
+    "avatar": "https://reqres.in/img/faces/7-image.jpg"
+  }
+}

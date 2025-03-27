@@ -1,0 +1,37 @@
+meta {
+  name: github-gql
+  type: graphql
+  seq: 1
+}
+
+post {
+  url: https://api.github.com/graphql
+  body: graphql
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{pat}}
+}
+
+body:graphql {
+  query {
+    repository(owner:"usebruno", name:"bruno") {
+      issues(last:20, states:CLOSED) {
+        edges {
+          node {
+            title
+            url
+            labels(first:5) {
+              edges {
+                node {
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

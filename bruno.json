@@ -1,0 +1,26 @@
+{
+  "version": "1",
+  "name": "bru-collection",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0.0016698837280273438,
+  "filesCount": 12,
+  "presets": {
+    "requestType": "http",
+    "requestUrl": "https://reqres.in/api/users"
+  },
+  "clientCertificates": {
+    "enabled": true,
+    "certs": [
+      {
+        "domain": "client.badssl.com",
+        "type": "pfx",
+        "pfxFilePath": "../../../../data/badssl.com-client.p12",
+        "passphrase": "badssl.com"
+      }
+    ]
+  }
+}
